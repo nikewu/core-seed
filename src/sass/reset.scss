@@ -1,0 +1,151 @@
+/*
+ * Global Reset of all HTML Elements
+*/
+body,
+html {
+    height: 100%;
+    border: 0;
+    font-family: "Helvetica-Neue", "Helvetica", Arial, sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    // 高度超出100%时内滚动
+    overflow: auto;
+}
+
+article,
+aside,
+audio,
+canvas,
+caption,
+details,
+div,
+figure,
+footer,
+header,
+hgroup,
+iframe,
+img,
+mark,
+menu,
+nav,
+object,
+section,
+span,
+summary,
+table,
+tbody,
+td,
+tfoot,
+thead,
+tr,
+tr,
+video {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+a,
+abbr,
+address,
+b,
+blockquote,
+cit,
+code,
+dd,
+del,
+dfn,
+dl,
+dt,
+em,
+fieldset,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+i,
+ins,
+label,
+legend,
+li,
+ol,
+p,
+pre,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+ul {
+    border: 0;
+    vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+}
+
+article,
+aside,
+audio,
+canvas,
+figcaption,
+figure,
+figure img,
+footer,
+header,
+hgroup,
+nav,
+section,
+video {
+    display: block;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+
+    caption,
+    td,
+    th {
+        text-align: left;
+        vertical-align: middle;
+    }
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a img {
+    border: 0;
+}
+
+:focus {
+    outline: 0;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+}
+
+textarea {
+    resize: none;
+    -webkit-appearance: none;
+}
+
+input {
+    -webkit-appearance: none;
+}
+
+select {
+    -webkit-appearance: none;
+    background-color: #fff;
+}

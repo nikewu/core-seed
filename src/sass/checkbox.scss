@@ -1,0 +1,25 @@
+@import "global.scss";
+
+.core-checkbox {
+    position: relative;
+    input {
+        &:checked ~ label::after {
+            content:attr(symbol); //勾选符号这里可以扩展自己选择的符号库
+            position: absolute;
+            bottom: -.2em;
+            left:.2em;
+            color: $font-color-2;
+            font-size: 1.2em;
+        }
+        &:checked ~ label {
+            background-color: $primary-color;
+        }
+    }
+    label {
+        background-color: $disabled-color;
+        padding: .75em;
+        border-radius: .325em;
+        display: inline-block;
+        position: relative;
+    }
+}

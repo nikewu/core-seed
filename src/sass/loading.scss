@@ -1,0 +1,49 @@
+@import "global.scss";
+// 全局loading
+.core-loading {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.5);
+}
+@for $i from 1 through $bar-num {
+    .loading-bar-#{$i}{
+      display: inline-block;
+      width: 4px;
+      position: absolute;
+      top: 50%;
+      height: 18px;
+      border-radius: 4px;
+      background-color: $disabled-color;
+      animation: loading 1s ease-in-out infinite;
+      left:48% + 3/4*($i - 1);
+      animation-delay: 0s + 0.09s*($i - 1);
+    }
+}
+@keyframes loading {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1, 2.2);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+// 按钮loading
+.core-loading-dot{
+   display:inline-block;
+   overflow:hidden;
+   height:1.25em;
+   margin-left: .2em;
+   &::after {
+      display: inline-table;
+      content: "\A.\A..\A...";
+      white-space: pre;
+      animation: spin4 2s steps(4) infinite;
+  }
+}
+@keyframes spin4  { to { transform: translateY( -6.0em); } }

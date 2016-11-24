@@ -1,0 +1,107 @@
+@import 'global.scss'; 
+// ---------- COMPONENT
+
+.core-textfield {
+    display: inline-block;
+    height: 4rem;
+    padding-top: 2rem;
+
+    input {
+        background: none;
+        border: none;
+        box-sizing: border-box;
+        display: block;
+        font-size: 1rem;
+        padding: 0.25rem 0.1rem;
+        width: 100%;
+
+        &:invalid {
+            box-shadow: none;
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        &:focus ~ label::after {
+            left: 0;
+            width: 100%;
+        }
+
+        &:invalid ~ label::before {
+            font-size: 1rem;
+            top: -2rem;
+        }
+
+        &[required]:focus ~ label::before {
+            font-size: 0.75rem;
+            top: -3.25rem;
+        }
+    }
+
+    label {
+        display: inline-block;
+        font-size: 0;
+        text-align: left;
+        pointer-events: none;
+        position: relative;
+        text-transform: uppercase;
+        width: 100%;
+
+        &::before {
+            content: attr(data-content);
+            position: relative;
+            font-size: 0.75rem;
+            top: -3.25rem;
+            transition: all 0.2s ease;
+            will-change: font-size, top;
+        }
+
+        &::after {
+            bottom: 1.2rem;
+            content: '';
+            height: 0.3rem;
+            left: 50%;
+            position: absolute;
+            transition: all 0.2s ease;
+            width: 0;
+            will-change: width, left;
+        }
+    }
+}
+// ---------- CONSTRUCTOR
+@mixin core-textfield($name,$color) {
+    .core-textfield.#{$name} {
+        @if $name == disable {
+            cursor: not-allowed;
+        }
+
+        input {
+            border-bottom: 0.1rem solid $color;
+            color: darken($color,15%);
+
+            &:invalid ~ label::before {
+                color: $color;
+            }
+
+            &[required]:focus ~ label::before {
+                color: lighten($color,15%);
+            }
+        }
+
+        label {
+            &::after {
+                background: $color;
+            }
+
+            &::before {
+                color: lighten($color,15%);
+            }
+        }
+    }
+}
+// ---------- INCLUDE COMPONENTS
+@include core-textfield( 'primary',$primary-color);
+@include core-textfield( 'warn',$warn-color);
+@include core-textfield( 'error',$error-color);
+@include core-textfield( 'disable',$disabled-color);

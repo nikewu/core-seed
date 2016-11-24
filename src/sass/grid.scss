@@ -1,0 +1,66 @@
+@charset "utf-8";
+@import "global.scss";
+/*基础栅栏格*/
+// 默认分块自适应
+.item{
+    flex: 1 0 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+// 默认容器
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+// 该模块默认最大分为6块可以根据需求更改
+@for $i from 1 through $grid-num {
+    .item-#{$i} {
+        flex: 0 0 100%/$i;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+/*小屏幕栅栏格*/
+@media (max-width:768px) {
+    @for $i from 1 through $grid-num {
+        .item-sm-#{$i} {
+            flex: 0 0 100%/$i;
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+}
+/*大屏幕栅栏格*/
+@media (min-width:1200px) {
+    @for $i from 1 through $grid-num {
+        .item-lg-#{$i} {
+            flex: 0 0 100%/$i;
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+}
+/* 行对齐方式 */
+.top {
+    align-items: flex-start;
+}
+
+.bottom {
+    align-items: flex-end;
+}
+
+.center {
+    align-items: center;
+}
+/* 单个位置控制*/
+.item-top {
+    align-self: flex-start;
+}
+
+.item-bottom {
+    align-self: flex-end;
+}
+
+.item-center {
+    align-self: center;
+}
