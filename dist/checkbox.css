@@ -1,0 +1,17 @@
+.core-checkbox {
+  position: relative; }
+  .core-checkbox input:checked ~ label::after {
+    content: attr(symbol);
+    position: absolute;
+    bottom: -.2em;
+    left: .2em;
+    color: #ffffff;
+    font-size: 1.2em; }
+  .core-checkbox input:checked ~ label {
+    background-color: #93dad6; }
+  .core-checkbox label {
+    background-color: rgba(0, 0, 0, 0.29804);
+    padding: .75em;
+    border-radius: .325em;
+    display: inline-block;
+    position: relative; }

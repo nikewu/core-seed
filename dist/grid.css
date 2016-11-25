@@ -1,0 +1,188 @@
+@charset "UTF-8";
+/*基础栅栏格*/
+.item {
+  -ms-flex: 1 0 0;
+      flex: 1 0 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.item-1 {
+  -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.item-2 {
+  -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.item-3 {
+  -ms-flex: 0 0 33.33333%;
+      flex: 0 0 33.33333%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.item-4 {
+  -ms-flex: 0 0 25%;
+      flex: 0 0 25%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.item-5 {
+  -ms-flex: 0 0 20%;
+      flex: 0 0 20%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.item-6 {
+  -ms-flex: 0 0 16.66667%;
+      flex: 0 0 16.66667%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+/*小屏幕栅栏格*/
+@media (max-width: 768px) {
+  .item-sm-1 {
+    -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+
+  .item-sm-2 {
+    -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+
+  .item-sm-3 {
+    -ms-flex: 0 0 33.33333%;
+        flex: 0 0 33.33333%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+
+  .item-sm-4 {
+    -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+
+  .item-sm-5 {
+    -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+
+  .item-sm-6 {
+    -ms-flex: 0 0 16.66667%;
+        flex: 0 0 16.66667%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; } }
+/*大屏幕栅栏格*/
+@media (min-width: 1200px) {
+  .item-lg-1 {
+    -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+
+  .item-lg-2 {
+    -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+
+  .item-lg-3 {
+    -ms-flex: 0 0 33.33333%;
+        flex: 0 0 33.33333%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+
+  .item-lg-4 {
+    -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+
+  .item-lg-5 {
+    -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+
+  .item-lg-6 {
+    -ms-flex: 0 0 16.66667%;
+        flex: 0 0 16.66667%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; } }
+/* 行对齐方式 */
+.top {
+  -ms-flex-align: start;
+      align-items: flex-start; }
+
+.bottom {
+  -ms-flex-align: end;
+      align-items: flex-end; }
+
+.center {
+  -ms-flex-align: center;
+      align-items: center; }
+
+/* 单个位置控制*/
+.item-top {
+  -ms-flex-item-align: start;
+      align-self: flex-start; }
+
+.item-bottom {
+  -ms-flex-item-align: end;
+      align-self: flex-end; }
+
+.item-center {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center; }

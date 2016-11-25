@@ -1,0 +1,44 @@
+.core-tip {
+  background: #e9e9e9;
+  border-bottom: dashed 1px rgba(0, 0, 0, 0.8);
+  padding: 0 0.4em;
+  cursor: help;
+  font-style: normal;
+  position: relative; }
+  .core-tip::after {
+    content: attr(data-info);
+    display: inline;
+    position: absolute;
+    top: 22px;
+    left: 0;
+    opacity: 0;
+    width: 230px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.5em;
+    padding: 0.5em 0.8em;
+    background: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    pointer-events: none;
+    /* This prevents the box from apearing when hovered. */
+    transition: opacity 250ms, top 250ms; }
+  .core-tip::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 12px;
+    left: 20px;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    border: solid transparent 5px;
+    border-bottom-color: rgba(0, 0, 0, 0.8);
+    transition: opacity 250ms, top 250ms; }
+  .core-tip:hover {
+    z-index: 2; }
+  .core-tip:hover::after {
+    opacity: 1;
+    top: 30px; }
+  .core-tip:hover::before {
+    opacity: 1;
+    top: 20px; }

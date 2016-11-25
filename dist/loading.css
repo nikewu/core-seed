@@ -1,0 +1,89 @@
+.core-loading {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5); }
+
+.loading-bar-1 {
+  display: inline-block;
+  width: 4px;
+  position: absolute;
+  top: 50%;
+  height: 18px;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.29804);
+  animation: loading 1s ease-in-out infinite;
+  left: 48%;
+  animation-delay: 0s; }
+
+.loading-bar-2 {
+  display: inline-block;
+  width: 4px;
+  position: absolute;
+  top: 50%;
+  height: 18px;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.29804);
+  animation: loading 1s ease-in-out infinite;
+  left: 48.75%;
+  animation-delay: 0.09s; }
+
+.loading-bar-3 {
+  display: inline-block;
+  width: 4px;
+  position: absolute;
+  top: 50%;
+  height: 18px;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.29804);
+  animation: loading 1s ease-in-out infinite;
+  left: 49.5%;
+  animation-delay: 0.18s; }
+
+.loading-bar-4 {
+  display: inline-block;
+  width: 4px;
+  position: absolute;
+  top: 50%;
+  height: 18px;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.29804);
+  animation: loading 1s ease-in-out infinite;
+  left: 50.25%;
+  animation-delay: 0.27s; }
+
+.loading-bar-5 {
+  display: inline-block;
+  width: 4px;
+  position: absolute;
+  top: 50%;
+  height: 18px;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.29804);
+  animation: loading 1s ease-in-out infinite;
+  left: 51%;
+  animation-delay: 0.36s; }
+
+@keyframes loading {
+  0% {
+    transform: scale(1); }
+  20% {
+    transform: scale(1, 2.2); }
+  40% {
+    transform: scale(1); } }
+.core-loading-dot {
+  display: inline-block;
+  overflow: hidden;
+  height: 1.25em;
+  margin-left: .2em; }
+  .core-loading-dot::after {
+    display: inline-table;
+    content: "\A.\A..\A...";
+    white-space: pre;
+    animation: spin4 2s steps(4) infinite; }
+
+@keyframes spin4 {
+  to {
+    transform: translateY(-6em); } }

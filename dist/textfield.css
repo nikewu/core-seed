@@ -1,0 +1,99 @@
+.core-textfield {
+  display: inline-block;
+  height: 4rem;
+  padding-top: 2rem; }
+  .core-textfield input {
+    background: none;
+    border: none;
+    box-sizing: border-box;
+    display: block;
+    font-size: 1rem;
+    padding: 0.25rem 0.1rem;
+    width: 100%; }
+    .core-textfield input:invalid {
+      box-shadow: none; }
+    .core-textfield input:focus {
+      outline: none; }
+    .core-textfield input:focus ~ label::after {
+      left: 0;
+      width: 100%; }
+    .core-textfield input:invalid ~ label::before {
+      font-size: 1rem;
+      top: -2rem; }
+    .core-textfield input[required]:focus ~ label::before {
+      font-size: 0.75rem;
+      top: -3.25rem; }
+  .core-textfield label {
+    display: inline-block;
+    font-size: 0;
+    text-align: left;
+    pointer-events: none;
+    position: relative;
+    text-transform: uppercase;
+    width: 100%; }
+    .core-textfield label::before {
+      content: attr(data-content);
+      position: relative;
+      font-size: 0.75rem;
+      top: -3.25rem;
+      transition: all 0.2s ease;
+      will-change: font-size, top; }
+    .core-textfield label::after {
+      bottom: 1.2rem;
+      content: '';
+      height: 0.3rem;
+      left: 50%;
+      position: absolute;
+      transition: all 0.2s ease;
+      width: 0;
+      will-change: width, left; }
+
+.core-textfield.primary input {
+  border-bottom: 0.1rem solid #93dad6;
+  color: #5ac6c0; }
+  .core-textfield.primary input:invalid ~ label::before {
+    color: #93dad6; }
+  .core-textfield.primary input[required]:focus ~ label::before {
+    color: #cceeec; }
+.core-textfield.primary label::after {
+  background: #93dad6; }
+.core-textfield.primary label::before {
+  color: #cceeec; }
+
+.core-textfield.warn input {
+  border-bottom: 0.1rem solid #ff8624;
+  color: #d76000; }
+  .core-textfield.warn input:invalid ~ label::before {
+    color: #ff8624; }
+  .core-textfield.warn input[required]:focus ~ label::before {
+    color: #ffb071; }
+.core-textfield.warn label::after {
+  background: #ff8624; }
+.core-textfield.warn label::before {
+  color: #ffb071; }
+
+.core-textfield.error input {
+  border-bottom: 0.1rem solid #FB656E;
+  color: #f91a28; }
+  .core-textfield.error input:invalid ~ label::before {
+    color: #FB656E; }
+  .core-textfield.error input[required]:focus ~ label::before {
+    color: #fdb0b4; }
+.core-textfield.error label::after {
+  background: #FB656E; }
+.core-textfield.error label::before {
+  color: #fdb0b4; }
+
+.core-textfield.disable {
+  cursor: not-allowed; }
+  .core-textfield.disable input {
+    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.29804);
+    color: rgba(0, 0, 0, 0.29804); }
+    .core-textfield.disable input:invalid ~ label::before {
+      color: rgba(0, 0, 0, 0.29804); }
+    .core-textfield.disable input[required]:focus ~ label::before {
+      color: rgba(38, 38, 38, 0.29804); }
+  .core-textfield.disable label::after {
+    background: rgba(0, 0, 0, 0.29804); }
+  .core-textfield.disable label::before {
+    color: rgba(38, 38, 38, 0.29804); }
