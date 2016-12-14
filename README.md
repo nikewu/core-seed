@@ -1,5 +1,5 @@
 # core-seed
-one simple UI base on sass  
+a simple UI base on sass  
 now it includes：flex grid, modal ,button ,input ,alert ,checkbox ,loading  
 you can rewrite it to your own style or  extend it 
 TODO  
